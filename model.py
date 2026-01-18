@@ -30,7 +30,7 @@ Oil_Level =	st.number_input('value of Oil_Level_% ', value = None)
 
 if st.button('Predict'):
   input_data = np.array([[
-      Load_,
+      Load,
       Temperature_C,
       Vibration_mm_s,
       Oil_Level,
