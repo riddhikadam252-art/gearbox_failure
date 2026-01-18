@@ -25,17 +25,17 @@ st.set_page_config(page_title='Gear Box Failure Classification', layout = "cente
 st.title('Gear Box Failure Classification App')
 st.write('Predict whether the Failure Rate')
 
-Load_%	= st.number_input('value of Load_% ', value = None)
+Load = st.number_input('value of Load_% ', value = None)
 Temperature_C	= st.number_input('value of Temperature_C ', value = None)
 Vibration_mm_s	= st.number_input('value of Vibration_mm_s ', value = None)
-Oil_Level_% =	st.number_input('value of Oil_Level_% ', value = None)
+Oil_Level =	st.number_input('value of Oil_Level_% ', value = None)
 
 if st.button('Predict'):
   input_data = np.array([[
-      Load_%,
+      Load_,
       Temperature_C,
       Vibration_mm_s,
-      Oil_Level_%,
+      Oil_Level,
   ]])
   prediction = model.predict(input_data)[0]
   if prediction == 0:
