@@ -37,9 +37,9 @@ if st.button('Predict'):
   ]])
   prediction = model.predict(input_data)[0]
   if prediction == 0:
-    st.success('Fail')
-  else:
     st.success('Pass')
+  else:
+    st.success('Fail')
 
 
 
